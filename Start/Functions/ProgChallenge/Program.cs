@@ -27,8 +27,8 @@ static (bool status, int strLength) IsPalindrome(string inputStr) {
 
 bool keepRunning = true;
 
+Console.WriteLine("Let's begin, type a phrase or word, or exit to quit:");
 do {
-    Console.WriteLine("Let's begin, type a phrase or word, or exit to quit:");
     string inputStr = Console.ReadLine();
     if (inputStr == "exit") {
         keepRunning = false;
