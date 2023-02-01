@@ -6,7 +6,7 @@ bool running = true;
 do
 {
     Console.WriteLine($"Enter a date (or 'exit' to quit):");
-    input = Console.ReadLine();
+    input = Console.ReadLine() ?? "";
     try {
         if (input == "exit") {
             running = false;
@@ -14,8 +14,6 @@ do
         }
         DateTime result = DateTime.Parse(input);
         DateTime today = DateTime.Today;
-        Console.WriteLine($"{result}");
-        
         
         int daysDifferent = (result.Date - today.Date).Days;
         string multiDay = daysDifferent > 1 ? "s" : "";
