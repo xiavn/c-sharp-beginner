@@ -43,20 +43,30 @@ namespace ListExample
             // ** Searching List Content **/
 
             // TODO: Determine if a list contains a given item
-
+            Console.WriteLine(strlist.Contains("Ron Gallagher"));
+            
 
             // TODO: The Exists function gives us a more customizable way to search
             // by using a predicate function to examine each element in the list
-
+            bool found = strlist.Exists(x => x.Length > 15);
+            Console.WriteLine($"Item found: {found}");
+            
 
             // TODO: Use the Find function to search through items
-
+            string item = "";
+            item = strlist.Find(x => x.StartsWith("L"));
+            Console.WriteLine($"Item found: {item}");
+            
 
             // TODO: The FindAll function can find multiple items
-
+            List<string> itemlist = strlist.FindAll(x => x.StartsWith("L"));
+            PrintList(itemlist);
+            
 
             // TODO: Use TrueForAll to see if a given condition is true for all elements
-
+            bool result = strlist.TrueForAll(x => x.Length > 10);
+            Console.WriteLine($"Result: {result}");
+            
         }
 
         static void PrintList(List<string> theList)
