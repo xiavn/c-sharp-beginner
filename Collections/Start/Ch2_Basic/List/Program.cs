@@ -12,28 +12,33 @@ namespace ListExample
                                 "George Carlin", "Lenny Bruce",
                                 "Eddie Murphy", "Louie Anderson"};
             // TODO: Create the list
-
+            List<string> strlist = new List<string>(10);
 
             // TODO: Add some elements to the list from an existing array
-
+            strlist.AddRange(comedians);
 
             // TODO: Add individual items
-
+            strlist.Add("Tina Fey");
 
             // TODO: Examine the Count and Capacity
-
+            Console.WriteLine($"Count and Capacity: {strlist.Count}, {strlist.Capacity}");
+            
 
             // TODO: Enumerate the items in the list with a foreach loop
-
+            PrintList(strlist);
 
             // TODO: Access any item by its index
-
+            Console.WriteLine($"Item value: {strlist[4]}");
+            
 
             // TODO: Remove items from the list
-
+            strlist.RemoveAt(2);
+            strlist.Remove("Tina Fey");
 
             // TODO: Sort the list content
-
+            strlist.Sort();
+            PrintList(strlist);
+            
 
             // ** Searching List Content **/
 
