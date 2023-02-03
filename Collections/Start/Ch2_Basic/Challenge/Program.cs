@@ -8,14 +8,14 @@ namespace Challenge
         static void Main(string[] args)
         {
             string[] items = {"Oranges", "Apples", "Pears", "Eggs", "Bread", "Butter"};
-            LinkedList<ShoppingItem> shoppingList = new LinkedList<ShoppingItem>();
+            List<ShoppingItem> shoppingList = new List<ShoppingItem>();
             foreach (string name in items) {
                 Random random = new Random();
                 ShoppingItem item = new ShoppingItem(name, (float)random.NextDouble() * 3, random.Next(1,10));
-                shoppingList.AddLast(item);
+                shoppingList.Add(item);
             }
             foreach (ShoppingItem si in shoppingList) {
-                Console.WriteLine($"Item: {si.Name:15}, Price: {si.Price}, Quantity: {si.Quantity}");
+                Console.WriteLine($"Item: {si.Name,15}, Price: {si.Price}, Quantity: {si.Quantity}");
             }
         }
     }
