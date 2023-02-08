@@ -3,7 +3,7 @@
 namespace ChainedEvents
 {
     // define the delegate for the event handler
-    public delegate void myEventHandler(string value);
+    public delegate void myEventHandler(int value);
 
     class EventPublisher
     {
